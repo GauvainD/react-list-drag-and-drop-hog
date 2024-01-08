@@ -5,7 +5,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JulianG/react-list-drag-and-drop.git"
+    "url": "https://github.com/GauvainD/react-list-drag-and-drop-hog"
   },
   "main": "./dist/RLDD.umd.cjs",
   "module": "./dist/RLDD.js",
