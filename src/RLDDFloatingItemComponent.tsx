@@ -9,6 +9,7 @@ export interface RLDDFloatingItemProps {
   draggedId: number;
   width: number;
   height: number;
+  children: React.ReactNode;
 }
 
 export interface RLDDFloatingItemState {

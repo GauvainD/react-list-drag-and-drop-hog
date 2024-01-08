@@ -1,6 +1,7 @@
-const exec = require('child_process').exec;
-const glob = require('glob');
-const fs = require('fs');
+import { exec } from 'node:child_process';
+import { glob } from 'glob';
+import fs from 'fs';
+import tslib from './tsconfig-lib.json' with {type: 'json'};
 
 console.log('running build-lib.js...');
 
@@ -17,7 +18,7 @@ exec('tsc -p tsconfig-lib.json', (err, stdout, stderr) => {
 });
 
 function copyCSSFiles() {
-	const config = require('./tsconfig-lib.json');
+	const config = tslib;
 	const outDir = config['compilerOptions']['outDir'];
 
 	console.assert(outDir);

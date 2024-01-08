@@ -9,6 +9,7 @@ export interface RLDDItemProps {
   activity: boolean;
   dragged: boolean;
   hovered: boolean;
+  children: React.ReactNode;
 }
 
 export interface RLDDItemState {
@@ -94,9 +95,13 @@ export default class RLDDItemComponent extends React.Component<RLDDItemProps, RL
       return;
     }
 
+    const ref = ReactDOM.findDOMNode(this)?.parentNode as Element;
+    const box = ref.getBoundingClientRect();
     const offset = {
-      x: e.layerX - this.initialOffset.x,
-      y: e.layerY - this.initialOffset.y
+      x: e.pageX - box.left - this.initialOffset.x,
+      y: e.pageY - box.top - this.initialOffset.y
+      //x: e.offsetX - this.initialOffset.x,
+      //y: e.offsetY - this.initialOffset.y
     };
 
     if (this.state.isDragging === false && this.isDown) {
