@@ -1,6 +1,6 @@
 {
   "name": "react-list-drag-and-drop-hog",
-  "version": "0.9.2",
+  "version": "0.10.0",
   "description": "",
   "type": "module",
   "repository": {
@@ -30,8 +30,8 @@
   "author": "",
   "license": "",
   "peerDependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
