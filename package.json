@@ -23,10 +23,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "start": "vite",
-    "prepare": "npm run build",
-    "build-lib": "rm -rf ./lib/* && node ./build-lib.js",
-    "prepack": "npm run-script build-lib",
-    "postversion": "npm run-script build-lib"
+    "prepare": "npm run build"
   },
   "author": "",
   "license": "",
@@ -49,12 +46,7 @@
     "dist",
     "LICENSE"
   ],
-  "types": [
-    "./dist/RLDD.d.ts",
-    "./dist/RLDDFloatingItemComponent.d.ts",
-    "./dist/RLDDItemComponent.d.ts",
-    "./dist/RLDDLogic.d.ts"
-  ],
+  "types": "./dist/RLDD.d.ts",
   "browserslist": [
     ">0.2%",
     "not dead",

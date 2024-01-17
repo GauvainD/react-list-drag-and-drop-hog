@@ -7,7 +7,7 @@ import dts from 'vite-plugin-dts';
 export default defineConfig({
     // depending on your application, base can also be "/"
     base: '',
-    plugins: [dts(), react(), viteTsconfigPaths()],
+    plugins: [dts({rollupTypes: true}), react(), viteTsconfigPaths()],
     server: {    
         // this ensures that the browser opens upon server start
         open: true,
@@ -18,7 +18,7 @@ export default defineConfig({
         lib: {
             entry : resolve(__dirname, 'src/RLDD.tsx'),
             name: "react-list-drag-and-drop-hog",
-            fileName: "RLDD"
+            fileName: "RLDD",
         },
         rollupOptions: {
             // make sure to externalize deps that shouldn't be bundled
