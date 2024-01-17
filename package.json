@@ -23,6 +23,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "start": "vite",
+    "prepare": "tsc && vite build",
     "build-lib": "rm -rf ./lib/* && node ./build-lib.js",
     "prepack": "npm run-script build-lib",
     "postversion": "npm run-script build-lib"
